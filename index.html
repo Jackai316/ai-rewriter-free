@@ -41,8 +41,7 @@ return;
 let text = document.getElementById("input").value;
 if(!text) return alert("Enter text")
 document.getElementById("result").innerText = "Processing...";
-//https://www.shuyanai.com/?promoter_code=fs86r7b3
-const res = await fetch("https://www.shuyanai.com/?promoter_code=fs86r7b3", {
+const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({
